@@ -1,24 +1,25 @@
-# README
+# MembersOnlyApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MembersOnlyApp is a simple web application built with Ruby on Rails that allows users to sign up, log in, and interact with other users through posts.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- User authentication: Users can sign up, log in, and log out.
+- Post creation: Logged-in users can create posts visible to other users.
+- User profiles: Users can view their own profile and edit their information.
 
-* System dependencies
+## Getting Started
 
-* Configuration
+To get started with MembersOnlyApp, follow these steps:
 
-* Database creation
+1. Clone the repository to your local machine:
 
-* Database initialization
+   ```bash
+   git clone https://github.com/your_username/members-only-app.git
+   ```
+2. Install dependencies
+   ```bash
+   bundle install
+   
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
