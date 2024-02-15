@@ -1,29 +1,30 @@
-<!-- app/views/posts/edit.html.erb -->
-<h1>Edit Post</h1>
+<div class="bg-gray-200 rounded-lg shadow-md p-6 mb-6">
+  <h1 class="text-3xl font-bold mb-6">Edit Post</h1>
 
-<%= form_with(model: @post, url: post_path(@post), method: :patch) do |form| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-      <ul>
-        <% @post.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+  <%= form_with(model: @post, url: post_path(@post), method: :patch, class: "space-y-5") do |form| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+        <ul>
+          <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :title, class: "text-gray-500" %>
+      <%= form.text_field :title, class: "w-full p-2 border border-gray-300 rounded mt-1" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :content, class: "text-gray-500" %>
+      <%= form.text_area :content, class: "w-full p-2 border border-gray-300 rounded mt-1" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Update Post', class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit 'Update Post' %>
-  </div>
-<% end %>
+</div>
