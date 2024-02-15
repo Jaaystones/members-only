@@ -16,10 +16,22 @@ To get started with MembersOnlyApp, follow these steps:
 
    ```bash
    git clone https://github.com/your_username/members-only-app.git
-   ```
+   
 2. Install dependencies
    ```bash
    bundle install
    
+3. Set up database
+   ```bash
+   rails db:create
+   rails db:migrate
+
+4. Start rails server
+   ```bash
+   bin/dev
+
+5. Visit http://localhost:3000 in your web browser to view the application.
+
+
 
 
