@@ -32,6 +32,12 @@ To get started with MembersOnlyApp, follow these steps:
 
 5. Visit http://localhost:3000 in your web browser to view the application.
 
+## Dependencies
+Ruby: 3.3.0
+Rails: 7.1.3
 
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvement, please open an issue or create a pull request.
 
-
+## Author
+Jaaystones
