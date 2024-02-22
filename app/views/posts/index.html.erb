@@ -11,8 +11,8 @@
         <span class="font-bold italic">Author:</span> <%= post.user.email %>
       </p>
       <% if post.user == current_user %>
-        <%= link_to "Edit Post", edit_post_path(post), class: "text-blue-500 hover:underline mr-2" %>
-        <%= link_to "Delete Post", post_path(post), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-500 hover:underline" %>
+        <%= link_to "Edit Post", edit_post_path(post), class: "text-blue-500 hover:underline mr-2" %> |  
+        <%= button_to "Delete Post", delete_post_path(post), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-500 hover:underline" %>
       <% end %>
     <% end %>
   </div>

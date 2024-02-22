@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :destroy]
   before_action :set_post, only: [:edit, :update, :destroy]
 
+
   def index
     @posts = Post.all
   end
@@ -35,9 +36,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    if @post.destroy(post_params)
-    redirect_to posts_path, notice: 'Post was successfully deleted.'
-    end
+    @post = set_post
+    @post.destroy
+    redirect_to posts_path, notice: "Post successfully deleted."
   end
 
 
